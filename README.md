@@ -2,7 +2,7 @@
 
 This is an example project demonstrating how to set up a backend using **Express.js**, **TypeScript**, and **PostgreSQL**. It includes a simple structure for working with a PostgreSQL database using `pg` and follows best practices for scalable Express applications.
 
-## 🔧 Features
+## Features
 
 - TypeScript for type safety
 - Express.js for routing and middleware
@@ -12,11 +12,13 @@ This is an example project demonstrating how to set up a backend using **Express
 
 ## Set up your environment
 
-Create a .env file in the root:
+Create a `.env` file in the root:
 
+```env
 HOST=localhost
 USER=postgres
 PASSWORD=yourpassword
 DATABASE=yourdb
 DB_PORT=5432
 PORT=3000
+```
