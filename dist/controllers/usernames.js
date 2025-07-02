@@ -5,6 +5,13 @@ exports.getUsernames = getUsernames;
 exports.getNewUsernameForm = getNewUsernameForm;
 const express_validator_1 = require("express-validator");
 const queries_1 = require("../db/queries");
+async function getUsernames(req, res) {
+    const usernames = await (0, queries_1.getAllUsernames)();
+    res.render("index", { usernames });
+}
+function getNewUsernameForm(req, res) {
+    res.render("form");
+}
 const validateUsername = [
     (0, express_validator_1.body)("username")
         .trim()
@@ -13,13 +20,6 @@ const validateUsername = [
         .isAlphanumeric()
         .withMessage("Username must contain only letters and numbers"),
 ];
-async function getUsernames(req, res) {
-    const usernames = await (0, queries_1.getAllUsernames)();
-    res.render("index", { usernames });
-}
-function getNewUsernameForm(req, res) {
-    res.render("form");
-}
 const createNewUsername = [
     validateUsername,
     async (req, res) => {
