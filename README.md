@@ -22,3 +22,7 @@ DATABASE=yourdb
 DB_PORT=5432
 PORT=3000
 ```
+
+## Running your application in production
+
+To run your application in production run the command `npm run start` or `pnpm run start`.
