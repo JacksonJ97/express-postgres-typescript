@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS usernames (
 
 INSERT INTO usernames (username) 
 VALUES
-  ('Bryan'),
-  ('Odin'),
-  ('Damon');
+  ('Alice'),
+  ('Bob'),
+  ('Charlie');
 `;
 
 async function main() {
